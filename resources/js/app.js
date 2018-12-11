@@ -1,4 +1,4 @@
-import Vue, {i18n, appStore} from '../vueConfig';
+import Vue, {i18n, appStore, router} from '../vueConfig';
 import App from './App.vue';
 
 export const initializeApp = (element, component) => {
@@ -6,6 +6,7 @@ export const initializeApp = (element, component) => {
     el: `#${element}`,
     i18n,
     store: appStore,
+    router,
     ...component
   })
 };

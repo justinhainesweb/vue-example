@@ -1,4 +1,4 @@
-{% load i18n %}
+{% load i18n settings_value %}
 {% load render_bundle from webpack_loader %}
 {% get_current_language as LANGUAGE_CODE %}
 <!doctype html>
@@ -18,7 +18,8 @@
   {% endblock %}
 
   <script>
-    window.app_locale = '{{ LANGUAGE_CODE }}'
+    window.app_locale = '{{ LANGUAGE_CODE }}';
+    window.app_name = '{% settings_value 'APP_NAME' %}';
   </script>
   {% render_bundle 'app' 'js' %}
 </body>

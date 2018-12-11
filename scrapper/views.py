@@ -1,5 +1,6 @@
 from django.views.generic.base import TemplateView
 from django.utils.translation import gettext as _
+from rest_framework.decorators import api_view
 
 
 class HomeView(TemplateView):

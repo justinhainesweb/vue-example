@@ -27,9 +27,16 @@
           </a>
         </div>
         <div class="relative">
-          <button class="inline-block text-sm px-4 py-2 leading-none no-underline border rounded text-black border-black hover:border-transparent hover:text-white hover:bg-black mt-4 lg:mt-0" :class="{'bg-black': showLoginPopup, 'text-white': showLoginPopup}" @click.prevent="toggleLoginPopup">Sign in</button>
+          <button
+            class="inline-block text-sm px-4 py-2 leading-none no-underline border rounded text-black border-black hover:border-transparent hover:text-white hover:bg-black mt-4 lg:mt-0"
+            :class="{'bg-black': loginPopupState, 'text-white': loginPopupState}" @click.prevent="toggleLoginPopup" v-if="!authenticated">Sign in
+          </button>
+          <button
+            class="inline-block text-sm px-4 py-2 leading-none no-underline border rounded text-black border-black hover:border-transparent hover:text-white hover:bg-black mt-4 lg:mt-0"
+            v-if="authenticated" @click="logout">Logout
+          </button>
           <transition name="fadeDown">
-            <LoginPopup v-if="showLoginPopup"></LoginPopup>
+            <LoginPopup v-if="loginPopupState" @onSuccess="closeLoginPopup"></LoginPopup>
           </transition>
         </div>
       </div>
@@ -56,10 +63,10 @@
     name: "App",
     components: {LoginPopup},
     computed: {
-      ...mapGetters(['showLoginPopup']),
+      ...mapGetters(['loginPopupState', 'authenticated']),
     },
     methods: {
-      ...mapActions(['toggleLoginPopup']),
+      ...mapActions(['toggleLoginPopup', 'closeLoginPopup', 'logout']),
     },
   }
 </script>

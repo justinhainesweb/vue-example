@@ -4,5 +4,5 @@ from . import views
 app_name = 'scrapper'
 
 urlpatterns = [
-    path('', views.HomeView.as_view(), name='index')
+    path('', views.HomeView.as_view(), name='index'),
 ]

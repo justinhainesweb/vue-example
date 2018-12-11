@@ -4,6 +4,8 @@ import VueRouter from 'vue-router';
 import VueI18n from 'vue-i18n';
 import VeeValidate from 'vee-validate';
 import store from './js/store';
+import router from './js/router';
+import axios from 'axios';
 
 /**
  * Config
@@ -19,6 +21,8 @@ Vue.use(Vuex);
 Vue.use(VueI18n);
 Vue.use(VueRouter);
 Vue.use(VeeValidate);
+
+Vue.prototype.$http = axios;
 
 
 /**
@@ -39,5 +43,5 @@ const i18n = new VueI18n({
 const appStore = new Vuex.Store(store);
 
 
-export {i18n, appStore};
+export {i18n, appStore, router};
 export default Vue;
