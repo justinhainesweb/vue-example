@@ -1,3 +1,5 @@
+/*@import "vue2-animate/dist/vue2-animate.min.css";*/
+
 /**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
@@ -61,11 +63,48 @@
  * @import "utilities/skew-transforms";
  */
 
-
 body {
   @apply mt-5;
 }
 
 .row {
   @apply flex mb-4 -mx-3;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -3%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 3%, 0);
+  }
+}
+
+.fadeDown-enter-active, .fadeInDown,
+.fadeDown-leave-active, .fadeOutDown {
+  animation-duration: .1s;
+  animation-fill-mode: both;
+}
+
+.fadeDown-enter-active, .fadeInDown {
+  animation-name: fadeInDown;
+}
+
+.fadeDown-leave-active, .fadeOutDown {
+  animation-name: fadeOutDown;
 }

@@ -1,6 +1,9 @@
 import Vue from 'vue';
+import Vuex from 'vuex';
 import VueRouter from 'vue-router';
 import VueI18n from 'vue-i18n';
+import VeeValidate from 'vee-validate';
+import store from './js/store';
 
 /**
  * Config
@@ -12,8 +15,10 @@ Vue.config.performance = process.env.NODE_ENV !== 'production';
 /**
  * Plugins
  */
+Vue.use(Vuex);
 Vue.use(VueI18n);
 Vue.use(VueRouter);
+Vue.use(VeeValidate);
 
 
 /**
@@ -31,6 +36,8 @@ const i18n = new VueI18n({
   messages, // set locale messages
 });
 
+const appStore = new Vuex.Store(store);
 
-export {i18n};
+
+export {i18n, appStore};
 export default Vue;

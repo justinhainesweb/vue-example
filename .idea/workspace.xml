@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="996f37a6-579e-44e3-afd7-38cd4d14bc3b" name="Default Changelist" comment="" />
+    <list default="true" id="996f37a6-579e-44e3-afd7-38cd4d14bc3b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/js/LoginPopup.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/vueConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/vueConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack-stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpack-stats.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,26 +32,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/App.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="12" lean-forward="true" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+            <state relative-caret-position="678">
+              <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
+        <entry file="file://$PROJECT_DIR$/resources/js/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+            <state relative-caret-position="435">
+              <caret line="29" column="240" selection-start-line="29" selection-start-column="240" selection-end-line="29" selection-end-column="240" />
+              <folding>
+                <element signature="e#2148#2190#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/vueConfig.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/LoginPopup.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="36" column="3" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tailwind.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="763" column="19" selection-start-line="763" selection-start-column="19" selection-end-line="763" selection-end-column="19" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,6 +100,12 @@
       <find>jsonfield</find>
       <find>setin</find>
       <find>container</find>
+      <find>fontsize</find>
+      <find>width</find>
+      <find>vue2-animate</find>
+      <find>adeDown</find>
+      <find>focus</find>
+      <find>outline</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -82,20 +128,22 @@
         <option value="$PROJECT_DIR$/.env.example" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/pyscrapper/settings.py" />
-        <option value="$PROJECT_DIR$/postcss.config.js" />
         <option value="$PROJECT_DIR$/assets/app-92647ec0a7beb8b2898d.css" />
         <option value="$PROJECT_DIR$/build/webpack.base.js" />
-        <option value="$PROJECT_DIR$/tailwind.js" />
         <option value="$PROJECT_DIR$/build/webpack.production.js" />
         <option value="$PROJECT_DIR$/build/webpack.dev.js" />
         <option value="$PROJECT_DIR$/.editorconfig" />
         <option value="$PROJECT_DIR$/resources/router.js" />
-        <option value="$PROJECT_DIR$/resources/vueConfig.js" />
-        <option value="$PROJECT_DIR$/resources/js/app.js" />
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/scrapper/views.py" />
+        <option value="$PROJECT_DIR$/resources/js/app.js" />
+        <option value="$PROJECT_DIR$/resources/js/store.js" />
+        <option value="$PROJECT_DIR$/tailwind.js" />
+        <option value="$PROJECT_DIR$/postcss.config.js" />
         <option value="$PROJECT_DIR$/resources/css/app.css" />
+        <option value="$PROJECT_DIR$/resources/js/LoginPopup.vue" />
+        <option value="$PROJECT_DIR$/resources/vueConfig.js" />
         <option value="$PROJECT_DIR$/resources/js/App.vue" />
       </list>
     </option>
@@ -139,6 +187,12 @@
               <item name="pyscrapper" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pyscrapper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pyscrapper" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pyscrapper" type="b2602c69:ProjectViewProjectNode" />
@@ -252,12 +306,12 @@
       <updated>1544436147867</updated>
       <workItem from="1544436149133" duration="960000" />
       <workItem from="1544519729855" duration="10049000" />
-      <workItem from="1544536195572" duration="3631000" />
+      <workItem from="1544536195572" duration="6350000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14640000" />
+    <option name="totallyTimeSpent" value="17359000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-339" y="-1417" width="1667" height="1417" extended-state="0" />
@@ -425,13 +479,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/postcss.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/app-92647ec0a7beb8b2898d.css" />
     <entry file="file://$PROJECT_DIR$/assets/app-51920b2dc36234202d3c.css" />
     <entry file="file://$PROJECT_DIR$/build/webpack.dev.js">
@@ -467,23 +514,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/router.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/vueConfig.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="19" lean-forward="true" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scrapper/apps.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -532,34 +562,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/postcss.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/vue2-animate/dist/vue2-animate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="747" column="33" lean-forward="true" selection-start-line="747" selection-start-column="33" selection-end-line="747" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        <state relative-caret-position="678">
+          <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tailwind.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2043">
-          <caret line="934" column="7" lean-forward="true" selection-start-line="934" selection-start-column="7" selection-end-line="934" selection-end-column="7" />
+        <state relative-caret-position="459">
+          <caret line="763" column="19" selection-start-line="763" selection-start-column="19" selection-end-line="763" selection-end-column="19" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/App.vue">
+    <entry file="file://$PROJECT_DIR$/resources/vueConfig.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="12" lean-forward="true" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+        <state relative-caret-position="300">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/resources/js/LoginPopup.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        <state relative-caret-position="540">
+          <caret line="36" column="3" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="240" selection-start-line="29" selection-start-column="240" selection-end-line="29" selection-end-column="240" />
+          <folding>
+            <element signature="e#2148#2190#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
