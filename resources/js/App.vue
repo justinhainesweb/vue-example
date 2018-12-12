@@ -1,8 +1,8 @@
 <template>
   <div class="container" id="app">
-    <nav class="flex items-center justify-between flex-wrap bg-grey-lightest p-6 -mx-3 mb-5 rounded">
+    <nav class="flex items-center justify-between flex-wrap py-6 -mx-3 mb-16 rounded">
       <div class="flex items-center flex-no-shrink text-black mr-6">
-        <span class="font-semibold text-xl tracking-tight">{{ $t("app") }}</span>
+        <span class="font-semibold text-xl tracking-tight">{{ $appName }}</span>
       </div>
       <div class="block lg:hidden">
         <button
@@ -29,23 +29,21 @@
         <div class="relative">
           <button
             class="inline-block text-sm px-4 py-2 leading-none no-underline border rounded text-black border-black hover:border-transparent hover:text-white hover:bg-black mt-4 lg:mt-0"
-            :class="{'bg-black': loginPopupState, 'text-white': loginPopupState}" @click.prevent="toggleLoginPopup" v-if="!authenticated">Sign in
+            :class="{'bg-black': loginPopupState, 'text-white': loginPopupState}" @click.prevent="toggleLoginPopup" v-if="!authenticated"> Sign in
           </button>
           <button
             class="inline-block text-sm px-4 py-2 leading-none no-underline border rounded text-black border-black hover:border-transparent hover:text-white hover:bg-black mt-4 lg:mt-0"
             v-if="authenticated" @click="logout">Logout
           </button>
           <transition name="fadeDown">
-            <LoginPopup v-if="loginPopupState" @onSuccess="closeLoginPopup"></LoginPopup>
+            <login-popup v-if="loginPopupState" @onSuccess="closeLoginPopup" v-on-clickaway="closeLoginPopup"></login-popup>
           </transition>
         </div>
       </div>
     </nav>
 
     <div class="row">
-      <div class="sidebar w-full xl:w-1/5">
-      </div>
-      <div class="content w-full xl:w-4/5">
+      <div class="content w-full">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur eligendi incidunt perspiciatis sapiente
           vitae! A adipisci asperiores dolorem ea eligendi facilis fugit id, officiis quia quos recusandae rem soluta,
           tempore.</p>
@@ -56,12 +54,12 @@
 </template>
 
 <script>
-  import LoginPopup from "./LoginPopup.vue";
   import {mapGetters, mapActions} from 'vuex';
+  import { mixin as clickaway } from 'vue-clickaway';
 
   export default {
     name: "App",
-    components: {LoginPopup},
+    mixins: [ clickaway ],
     computed: {
       ...mapGetters(['loginPopupState', 'authenticated']),
     },

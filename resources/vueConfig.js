@@ -23,14 +23,17 @@ Vue.use(VueRouter);
 Vue.use(VeeValidate);
 
 Vue.prototype.$http = axios;
-
+Vue.prototype.$appName = window.app_name;
 
 /**
  * Localization
  */
 const messages = {
   en: {
-    app: 'App',
+    password: {
+      change: 'Please choose a password.',
+      forgot: 'Forgot Password?',
+    },
   },
 };
 

@@ -27,6 +27,7 @@ media
 build/
 develop-eggs/
 dist/
+assets/
 downloads/
 eggs/
 .eggs/

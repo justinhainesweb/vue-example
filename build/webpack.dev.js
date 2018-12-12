@@ -1,5 +1,6 @@
 const merge = require('webpack-merge');
 const baseConfig = require('./webpack.base');
+const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
 
 const config = {
   mode: 'development',
@@ -24,6 +25,8 @@ const config = {
       }
     ],
   },
+
+  plugins: [new ErrorOverlayPlugin()],
 };
 
 module.exports = () => {

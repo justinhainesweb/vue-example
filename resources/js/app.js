@@ -1,5 +1,13 @@
 import Vue, {i18n, appStore, router} from '../vueConfig';
 import App from './App.vue';
+import 'es6-promise/auto';
+
+Vue.component('login-popup', (resolve) => {
+  import(/* webpackChunkName: "login-popup" */'./LoginPopup.vue')
+    .then((LoginPopup) => {
+      resolve(LoginPopup.default);
+    });
+});
 
 export const initializeApp = (element, component) => {
   new Vue({
@@ -12,3 +20,4 @@ export const initializeApp = (element, component) => {
 };
 
 initializeApp('app', App);
+

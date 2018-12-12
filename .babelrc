@@ -2,9 +2,11 @@
   "plugins": [
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-object-rest-spread",
-    "@babel/plugin-transform-destructuring"
+    "@babel/plugin-transform-destructuring",
+    "@babel/plugin-syntax-dynamic-import"
   ],
   "presets": [
     "@babel/preset-env"
   ]
 }
+

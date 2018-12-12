@@ -6,6 +6,7 @@ const config = {
   mode: 'production',
 
   output: {
+    chunkFilename: "[name]-[contenthash]_bundle.js",
     filename: "[name]-[contenthash].js"
   },
 
