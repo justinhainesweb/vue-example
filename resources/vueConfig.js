@@ -6,6 +6,10 @@ import VeeValidate from 'vee-validate';
 import store from './js/store';
 import router from './js/router';
 import axios from 'axios';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
 
 /**
  * Config
@@ -42,6 +46,19 @@ const i18n = new VueI18n({
   fallbackLocale: 'en', // set fallback locale
   messages, // set locale messages
 });
+
+
+/**
+ * Misc
+ */
+library.add(faSignInAlt);
+
+
+/**
+ * Components
+ */
+Vue.component('font-awesome-icon', FontAwesomeIcon);
+
 
 const appStore = new Vuex.Store(store);
 

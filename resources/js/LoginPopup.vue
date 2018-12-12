@@ -1,6 +1,5 @@
 <template>
-  <div class="loginPopup max-w-xs min-w-xs absolute pin-r">
-
+  <div class="loginPopup max-w-xs min-w-xs absolute pin-r z-40">
 
     <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
       <div class="mb-4">
@@ -8,7 +7,7 @@
           Username
         </label>
         <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
-               id="username" name="username" type="text" placeholder="Username" v-validate="'required'" v-model="username" :class="{'border-red': errors.has('username')}">
+               id="username" name="username" type="text" placeholder="Username" v-validate="'required'" v-model="username" :class="{'border-red': errors.has('username'), 'mb-3': errors.has('username')}">
         <p class="text-red text-xs italic" v-if="errors.has('username')">Please insert a username.</p>
       </div>
       <div class="mb-6">
