@@ -62,6 +62,7 @@ const config = {
       chunkFilename: "[id]-[chunkhash].css"
     }),
     new PurgecssPlugin({
+      whitelistPatterns: [/(enter-active|leave-active)$/],
       paths: glob.sync([
         path.join(__dirname, '../templates/**/*.html'),
         path.join(__dirname, '../resources/**/*.vue'),
