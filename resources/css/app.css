@@ -63,10 +63,6 @@
  * @import "utilities/skew-transforms";
  */
 
-body {
-  @apply mt-5;
-}
-
 .row {
   @apply flex mb-4 -mx-3;
 }

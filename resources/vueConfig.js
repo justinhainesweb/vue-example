@@ -57,7 +57,7 @@ library.add(faSignInAlt);
 /**
  * Components
  */
-Vue.component('font-awesome-icon', FontAwesomeIcon);
+Vue.component('icon', FontAwesomeIcon);
 
 
 const appStore = new Vuex.Store(store);

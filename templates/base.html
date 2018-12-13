@@ -21,6 +21,7 @@
     window.app_locale = '{{ LANGUAGE_CODE }}';
     window.app_name = '{% settings_value 'APP_NAME' %}';
   </script>
+  {% render_bundle 'main' 'js' %}
   {% render_bundle 'vendor' 'js' %}
 {#  {% render_bundle 'login-popup' 'js' %}#}
   {% render_bundle 'app' 'js' %}

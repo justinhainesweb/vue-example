@@ -66,16 +66,25 @@ INSTALLED_APPS = [
     'scrapper',
 ]
 
-MIDDLEWARE = [
+SECURITY_MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
+]
+
+# This is required to go first! See: https://github.com/ottoyiu/django-cors-headers#setup
+CORS_MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+]
+
+DJANGO_MIDDLEWARE = [
+    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+MIDDLEWARE = SECURITY_MIDDLEWARE + CORS_MIDDLEWARE + DJANGO_MIDDLEWARE
 
 ROOT_URLCONF = 'pyscrapper.urls'
 
@@ -150,6 +159,7 @@ WEBPACK_LOADER = {
     }
 }
 
+CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = (
     'localhost:8007',
 )
