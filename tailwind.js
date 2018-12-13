@@ -24,7 +24,7 @@ View the full documentation at https://tailwindcss.com.
 |
 */
 
-let defaultConfig = require('tailwindcss/defaultConfig')()
+let defaultConfig = require('tailwindcss/defaultConfig')();
 
 
 /*
@@ -508,6 +508,18 @@ module.exports = {
     '4/5': '80%',
     '1/6': '16.66667%',
     '5/6': '83.33333%',
+    '1/12': '8.33333%',
+    '2/12': '16.66666%',
+    '3/12': '24.99999%',
+    '4/12': '33.33332%',
+    '5/12': '41.66662%',
+    '6/12': '49.99992%',
+    '7/12': '58.33322%',
+    '8/12': '66.66652%',
+    '9/12': '74.99982%',
+    '10/12': '83.33315%',
+    '11/12': '91.66648%',
+    '12/12': '100%%',
     'full': '100%',
     'screen': '100vw',
   },

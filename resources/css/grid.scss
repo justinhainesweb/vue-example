@@ -1,0 +1,66 @@
+.row {
+  @apply flex;
+  @apply -mx-8;
+}
+
+@responsive {
+  .col-1 {
+    @apply w-1/12;
+    @apply px-4;
+  }
+
+  .col-2 {
+    @apply w-2/12;
+    @apply px-4;
+  }
+
+  .col-3 {
+    @apply w-3/12;
+    @apply px-4;
+  }
+
+  .col-4 {
+    @apply w-4/12;
+    @apply px-4;
+  }
+
+  .col-5 {
+    @apply w-5/12;
+    @apply px-4;
+  }
+
+  .col-6 {
+    @apply w-6/12;
+    @apply px-4;
+  }
+
+  .col-7 {
+    @apply w-7/12;
+    @apply px-4;
+  }
+
+  .col-8 {
+    @apply w-8/12;
+    @apply px-4;
+  }
+
+  .col-9 {
+    @apply w-9/12;
+    @apply px-4;
+  }
+
+  .col-10 {
+    @apply w-10/12;
+    @apply px-4;
+  }
+
+  .col-11 {
+    @apply w-11/12;
+    @apply px-4;
+  }
+
+  .col-12 {
+    @apply w-full;
+    @apply px-4;
+  }
+}

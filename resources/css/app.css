@@ -64,10 +64,6 @@
  * @import "utilities/skew-transforms";
  */
 
-.row {
-  @apply flex mb-4 -mx-3;
-}
-
 @keyframes fadeInDown {
   from {
     opacity: 0;

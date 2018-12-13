@@ -56,7 +56,7 @@
     "yarn": "^1.12.3"
   },
   "scripts": {
-    "dev": "webpack --config build/webpack.dev.js --watch --run-dev --progress",
+    "dev": "webpack-dev-server --config build/webpack.dev.js --watch --run-dev --progress",
     "build": "webpack --config build/webpack.production.js --run-prod"
   }
 }

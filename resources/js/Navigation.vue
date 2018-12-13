@@ -1,8 +1,8 @@
 <template>
   <nav class="flex items-center justify-between flex-wrap py-6 -mx-3">
-    <div class="flex items-center flex-no-shrink text-black mr-6">
+    <a class="flex items-center flex-no-shrink mr-6 no-underline" :class="logoClasses" href="/">
       <span class="font-semibold text-xl tracking-tight appName">{{ $appName }}</span>
-    </div>
+    </a>
     <div class="block lg:hidden">
       <button
               class="flex items-center px-3 py-2 border rounded text-grey-dark border-black-light hover:text-black hover:border-black">
@@ -13,28 +13,29 @@
     </div>
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
       <div class="text-sm lg:flex-grow">
-        <a href="#responsive-header"
-           class="block mt-4 lg:inline-block lg:mt-0 text-grey-dark hover:text-black mr-4">
-          Docs
+        <a href="#grid" :class="linkClasses"
+           class="block mt-4 lg:inline-block lg:mt-0 mr-4">
+          Grid
         </a>
-        <a href="#responsive-header"
-           class="block mt-4 lg:inline-block lg:mt-0 text-grey-dark hover:text-black mr-4">
+        <a href="#responsive-header" :class="linkClasses"
+           class="block mt-4 lg:inline-block lg:mt-0 mr-4">
           Examples
         </a>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-grey-dark hover:text-black">
+        <a href="#responsive-header" :class="linkClasses"
+           class="block mt-4 lg:inline-block lg:mt-0">
           Blog
         </a>
       </div>
       <div class="relative">
-        <button
-                class="inline-block text-sm px-4 py-3 leading-none no-underline border rounded text-black border-black hover:border-transparent hover:text-white hover:bg-black mt-4 lg:mt-0"
-                :class="{'bg-black': loginPopupState, 'text-white': loginPopupState}" @click.prevent="toggleLoginPopup"
+        <button class="inline-block text-sm leading-none no-underline rounded py-3 px-2"
+                :class="linkClasses"
+                @click.prevent="toggleLoginPopup"
                 v-if="!authenticated">
           <icon icon="sign-in-alt" class="fill-current"/>
           Sign in
         </button>
-        <button
-                class="inline-block text-sm px-4 py-2 leading-none no-underline border rounded text-black border-black hover:border-transparent hover:text-white hover:bg-black mt-4 lg:mt-0"
+        <button class="inline-block text-sm leading-none no-underline rounded py-3 px-2"
+                :class="linkClasses"
                 v-if="authenticated" @click="logout">Logout
         </button>
         <transition name="fadeDown">
@@ -66,6 +67,21 @@
           'bg-white': this.scrolledTop,
         };
       },
+      logoClasses() {
+        return {
+          'text-white': !this.scrolledTop,
+          'text-black': this.scrolledTop,
+        };
+      },
+      linkClasses() {
+        return {
+          'text-grey-dark': true,
+          'hover:text-white': !this.scrolledTop,
+
+          // When nav is fixed top with background
+          'hover:text-black': this.scrolledTop,
+        };
+      },
     },
     methods: {
       ...mapActions(['toggleLoginPopup', 'closeLoginPopup', 'logout']),
@@ -86,23 +102,3 @@
     },
   }
 </script>
-
-<style>
-  :not(.scrolled ) nav .appName,
-  :not(.scrolled ) nav button {
-    @apply text-white;
-  }
-
-  .scrolled nav .appName,
-  .scrolled nav button {
-    @apply text-black;
-  }
-
-  :not(.scrolled ) nav button {
-    @apply border-white;
-  }
-
-  .scrolled nav button {
-    @apply border-black;
-  }
-</style>

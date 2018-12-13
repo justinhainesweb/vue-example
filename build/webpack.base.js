@@ -64,6 +64,15 @@ module.exports = {
         }
       },
       {
+        test: /\.scss$/,
+        use: [
+          'style-loader', // creates style nodes from JS strings
+          'css-loader', // translates CSS into CommonJS
+          'sass-loader', // compiles Sass to CSS, using Node Sass by default
+          'postcss-loader'
+        ]
+      },
+      {
         test: /\.svg$/,
         loader: 'raw-loader'
       },
