@@ -6,9 +6,10 @@ import VeeValidate from 'vee-validate';
 import store from './store';
 import router from './router';
 import axios from 'axios';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faSignInAlt, faChevronRight } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faSignInAlt, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import utils from './utils';
 import messages from '@/lang/en';
 
@@ -83,6 +84,7 @@ const i18n = new VueI18n({
  */
 library.add(faSignInAlt);
 library.add(faChevronRight);
+library.add(faGithub);
 
 
 /**
