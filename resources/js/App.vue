@@ -6,10 +6,10 @@
       </div>
     </div>
 
-    <div class="min-h-screen relative pb-16 bg-no-repeat bg-cover bg-center py-32" :style="`background-image: url('${bg}')`">
+    <div class="min-h-screen relative bg-no-repeat bg-cover bg-center py-16 flex items-center justify-center overlay-50" :style="`background-image: url('${bg}')`">
       <div class="container">
         <div class="row">
-          <h1 class="text-white text-display font-black font-heading">This is the future</h1>
+          <h1 class="w-full text-white text-display text-center font-black font-heading">Scrape me 🚀</h1>
         </div>
       </div>
 
