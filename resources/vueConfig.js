@@ -26,6 +26,7 @@ Vue.use(VueI18n);
 Vue.use(VueRouter);
 Vue.use(VeeValidate);
 
+Vue.prototype.__STATIC__ = window.static;
 Vue.prototype.$http = axios;
 Vue.prototype.$appName = window.app_name;
 

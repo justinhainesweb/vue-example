@@ -226,6 +226,19 @@ module.exports = {
       'Courier New',
       'monospace',
     ],
+    'heading': [
+      'Karla',
+      'Constantia',
+      'Lucida Bright',
+      'Lucidabright',
+      'Lucida Serif',
+      'Lucida',
+      'DejaVu Serif',
+      'Bitstream Vera Serif',
+      'Liberation Serif',
+      'Georgia',
+      'serif',
+    ],
   },
 
 
@@ -249,7 +262,7 @@ module.exports = {
   */
 
   textSizes: {
-    'xs': '.75rem',     // 12px
+    'xs': '.7rem',     // 12px
     'sm': '.875rem',    // 14px
     'base': '.875rem',  // 16px
     'lg': '1.125rem',   // 18px
@@ -258,6 +271,7 @@ module.exports = {
     '3xl': '1.875rem',  // 30px
     '4xl': '2.25rem',   // 36px
     '5xl': '3rem',      // 48px
+    'display': '8rem',      // 48px
   },
 
 
@@ -582,6 +596,8 @@ module.exports = {
   minHeight: {
     '0': '0',
     'full': '100%',
+    'half-screen': '50vh',
+    '3/4-screen': '75vh',
     'screen': '100vh',
   },
 
@@ -883,7 +899,7 @@ module.exports = {
     cursor: ['responsive'],
     display: ['responsive'],
     flexbox: ['responsive'],
-    float: ['responsive'],
+    float: false,
     fonts: ['responsive'],
     fontWeights: ['responsive', 'hover', 'focus'],
     height: ['responsive'],

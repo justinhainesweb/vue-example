@@ -1,4 +1,5 @@
 /*@import "vue2-animate/dist/vue2-animate.min.css";*/
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
 
 /**
  * This injects Tailwind's base styles, which is a combination of
@@ -103,4 +104,8 @@
 
 .fadeDown-leave-active, .fadeOutDown {
   animation-name: fadeOutDown;
+}
+
+.transition {
+  transition: .2s ease;
 }
