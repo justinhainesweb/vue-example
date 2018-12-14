@@ -76,10 +76,32 @@
             <button @click.stop.prevent class="button button-light">Button light</button>
             <button @click.stop.prevent class="button button-primary">Button primary</button>
             <button @click.stop.prevent class="button button-red">Button red</button>
+            <button @click.stop.prevent class="button button-green">Button green</button>
+            <button @click.stop.prevent class="button block w-full mt-1 button-light">Button block</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <pre class="border border-dashed bg-grey-lightest rounded px-5 py-4 my-5 text-sm">function logInfo(param) {
-  console.log(param);
-}</pre>
+    <div class="mt-16">
+      <div class="container">
+        <div class="row mb-8">
+          <div class="col-12">
+            <h2 id="code">Code</h2>
+          </div>
+        </div>
+
+        <div class="row mb-8">
+          <div class="col-12">
+            <prism class="bg-grey-lightest rounded px-8 py-7 my-5 text-sm" language="javascript" :code="'document.addEventListener(\'scroll\', (event) => {\n'+
+'  const scrollTop = (window.pageYOffset || document.scrollTop) - (document.clientTop || 0);\n'+
+'  if (scrollTop > 10) {\n'+
+'    this.scrolledTop = true;\n'+
+'  } else {\n'+
+'    this.scrolledTop = false;\n'+
+'  }\n'+
+'  this.$forceUpdate();\n'+
+'});'"></prism>
           </div>
         </div>
       </div>

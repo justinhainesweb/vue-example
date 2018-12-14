@@ -1025,6 +1025,17 @@ module.exports = {
                 backgroundColor: bgColors['red'],
               },
             },
+
+            '&.button-green': {
+              color: textColors.white,
+              backgroundColor: bgColors['green-light'],
+              '&:hover': {
+                backgroundColor: bgColors['green'],
+              },
+              '&:focus': {
+                backgroundColor: bgColors['green'],
+              },
+            },
           },
         };
 
