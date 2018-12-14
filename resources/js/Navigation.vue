@@ -17,13 +17,9 @@
            class="block mt-4 lg:inline-block lg:mt-0 mr-4">
           Grid
         </a>
-        <a href="#responsive-header" :class="linkClasses"
-           class="block mt-4 lg:inline-block lg:mt-0 mr-4">
-          Examples
-        </a>
-        <a href="#responsive-header" :class="linkClasses"
+        <a href="#buttons" :class="linkClasses"
            class="block mt-4 lg:inline-block lg:mt-0">
-          Blog
+          Buttons
         </a>
       </div>
       <div class="relative">

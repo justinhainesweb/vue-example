@@ -969,6 +969,67 @@ module.exports = {
       center: true,
       padding: '1rem',
     }),
+      function ({addComponents, config}) {
+        const bgColors = config('backgroundColors', []);
+        const textColors = config('colors', []);
+        const padding = config('padding', []);
+        const borderRadius = config('borderRadius', []);
+        const fontSizes = config('textSizes', []);
+
+        const buttons = {
+          '.button': {
+            padding: `${padding['2']} ${padding['3']}`,
+            borderRadius: borderRadius['default'],
+            color: textColors.black,
+            backgroundColor: bgColors.transparent,
+            fontSize: fontSizes['sm'],
+            outline: 'none',
+            '&:hover': {
+              backgroundColor: bgColors['grey-lighter'],
+              outline: 'none',
+            },
+            '&:focus': {
+              backgroundColor: bgColors['grey-light'],
+              outline: 'none',
+            },
+
+            '&.button-light': {
+              color: textColors.black,
+              backgroundColor: bgColors['grey-lighter'],
+              '&:hover': {
+                backgroundColor: bgColors['grey-light'],
+              },
+              '&:focus': {
+                backgroundColor: bgColors['grey'],
+              },
+            },
+
+            '&.button-primary': {
+              color: textColors.white,
+              backgroundColor: bgColors.indigo,
+              '&:hover': {
+                backgroundColor: bgColors['indigo-dark'],
+              },
+              '&:focus': {
+                backgroundColor: bgColors['indigo-dark'],
+              },
+            },
+
+            '&.button-red': {
+              color: textColors.white,
+              backgroundColor: bgColors['red-light'],
+              '&:hover': {
+                backgroundColor: bgColors['red'],
+              },
+              '&:focus': {
+                backgroundColor: bgColors['red'],
+              },
+            },
+          },
+        };
+
+        addComponents(buttons);
+      }
   ],
 
 

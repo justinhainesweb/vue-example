@@ -64,6 +64,10 @@
  * @import "utilities/skew-transforms";
  */
 
+*, *::before *::after {
+  box-sizing: border-box;
+}
+
 @keyframes fadeInDown {
   from {
     opacity: 0;

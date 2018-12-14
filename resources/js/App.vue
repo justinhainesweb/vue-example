@@ -16,7 +16,7 @@
       <AlertNew class="pin-b absolute"/>
     </div>
 
-    <div class="min-h-3/4-screen mt-16">
+    <div class="mt-16">
       <div class="container">
         <div class="row mb-8">
           <div class="col-12">
@@ -43,13 +43,13 @@
         </div>
 
         <div class="row mb-8">
-          <div class="col-4" v-for="(x) in [1,2,3]">
+          <div class="col-12 lg:col-4 mb-4 lg:mb-0" v-for="(x) in [1,2,3]">
             <div class="rounded border p-5 bg-grey-lighter text-xs text-center text-grey-dark">.col-4</div>
           </div>
         </div>
 
         <div class="row mb-8">
-          <div class="col-6" v-for="(x) in [1,2]">
+          <div class="col-12 lg:col-6 mb-4 lg:mb-0" v-for="(x) in [1,2]">
             <div class="rounded border p-5 bg-grey-lighter text-xs text-center text-grey-dark">.col-6</div>
           </div>
         </div>
@@ -61,6 +61,30 @@
         </div>
       </div>
     </div>
+
+    <div class="mt-16">
+      <div class="container">
+        <div class="row mb-8">
+          <div class="col-12">
+            <h2 id="buttons">Buttons</h2>
+          </div>
+        </div>
+
+        <div class="row mb-8">
+          <div class="col-12">
+            <button @click.stop.prevent class="button">Button</button>
+            <button @click.stop.prevent class="button button-light">Button light</button>
+            <button @click.stop.prevent class="button button-primary">Button primary</button>
+            <button @click.stop.prevent class="button button-red">Button red</button>
+
+            <pre class="border border-dashed bg-grey-lightest rounded px-5 py-4 my-5 text-sm">function logInfo(param) {
+  console.log(param);
+}</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <footer class="bg-grey-lightest py-16 mt-32">
       <div class="container">

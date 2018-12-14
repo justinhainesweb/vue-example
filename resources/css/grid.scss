@@ -1,5 +1,6 @@
 .row {
   @apply flex;
+  @apply flex-wrap;
   @apply -mx-8;
 }
 

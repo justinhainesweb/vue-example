@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'webpack_loader',
 
+    'core',
     'scrapper',
 ]
 
