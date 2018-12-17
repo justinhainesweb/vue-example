@@ -14,3 +14,12 @@
 6. Run django server with 8007 port `./manage.py runserver 8007`
 7. Run webpack-dev-server `yarn dev`
 
+
+
+## Stack
+- webpack 4 (with hot reload)
+- postcss
+- babel
+- django 2.1
+- django rest framework
+- dynamic imports (code split)
