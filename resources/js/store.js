@@ -11,7 +11,7 @@ axios.defaults.xsrfHeaderName = 'X-CSRFToken';
 export default new Vuex.Store({
   state: {
     authUser: {},
-    isAuthenticated: false,
+    isAuthenticated: !!localStorage.getItem('token') || false,
     jwt: localStorage.getItem('token'),
     endpoints: {
       // TODO: Remove hardcoding of dev endpoints

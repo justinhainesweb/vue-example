@@ -44,9 +44,11 @@
     },
     methods: {
       authenticate() {
+        const date = new Date();
         const payload = {
           username: this.username,
-          password: this.password
+          password: this.password,
+          exp: Date.now() + (7 * 24 * 60 * 60 * 1000),
         };
 
         this.$validator.validateAll().then((result) => {
