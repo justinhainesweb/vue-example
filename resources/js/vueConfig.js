@@ -20,6 +20,9 @@ Vue.config.devtools = utils.isProduction;
 Vue.config.productionTip = utils.isProduction;
 Vue.config.performance = utils.isProduction;
 
+axios.defaults.xsrfCookieName = 'csrftoken';
+axios.defaults.xsrfHeaderName = 'X-CSRFToken';
+
 /**
  * Plugins
  */
@@ -93,8 +96,6 @@ library.add(faGithub);
 Vue.component('icon', FontAwesomeIcon);
 
 
-const appStore = new Vuex.Store(store);
 
-
-export {i18n, appStore, router};
+export {i18n, store, router};
 export default Vue;

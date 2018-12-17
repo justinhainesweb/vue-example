@@ -1,10 +1,17 @@
 import VueRouter from 'vue-router';
-import LoggedIn from './auth/LoggedIn.vue';
+import Home from "./Home";
+import Profile from "./auth/Profile";
 
 const routes = [
   {
     path: '/',
-    component: LoggedIn,
+    name: 'Home',
+    component: Home,
+  },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: Profile,
   },
 ];
 

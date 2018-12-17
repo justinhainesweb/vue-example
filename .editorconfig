@@ -1,3 +1,7 @@
 [resources/**/*.{js, vue, css}]
 indent_size = 2
 indent_style = space
+
+[*.py]
+indent_size = 4
+max_line_length = 79

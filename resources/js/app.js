@@ -1,4 +1,4 @@
-import Vue, {i18n, appStore, router} from './vueConfig';
+import Vue, {i18n, store, router} from './vueConfig';
 import App from './App.vue';
 import 'es6-promise/auto';
 import '@/css/grid.scss';
@@ -18,7 +18,7 @@ export const initializeApp = (element, component) => {
   new Vue({
     el: `#${element}`,
     i18n,
-    store: appStore,
+    store,
     router,
     ...component
   })

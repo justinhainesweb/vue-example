@@ -20,7 +20,7 @@
       </div>
       <div class="flex items-center justify-between">
         <button class="bg-grey-darkest hover:bg-black text-white font-normal py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                type="button" @click="login">
+                type="button" @click="authenticate">
           Sign In
         </button>
         <a class="block align-baseline font-bold text-sm text-grey-darkest hover:text-black" href="#">
@@ -43,12 +43,10 @@
       }
     },
     methods: {
-      login() {
-        this.errors.clear();
-
-        const data = {
+      authenticate() {
+        const payload = {
           username: this.username,
-          password: this.password,
+          password: this.password
         };
 
         this.$validator.validateAll().then((result) => {
@@ -56,15 +54,45 @@
             return;
           }
 
-          this.$store.dispatch('login', data).then(() => {
-            if (this.authenticated) {
-              this.$emit('onSuccess')
-            }
+          this.$http.post(this.$store.state.endpoints.obtainJWT, payload).then((response) => {
+            this.$store.commit('updateToken', response.data.access);
+            // get and set auth user
+            const base = {
+              baseURL: this.$store.state.endpoints.baseUrl,
+              headers: {
+                // Set your Authorization to 'JWT', not Bearer!!!
+                Authorization: `JWT ${this.$store.state.jwt}`,
+                'Content-Type': 'application/json'
+              },
+              xhrFields: {
+                withCredentials: true
+              }
+            };
+            // Even though the authentication returned a user object that can be
+            // decoded, we fetch it again. This way we aren't super dependant on
+            // JWT and can plug in something else.
+            const axiosInstance = this.$http.create(base);
+            axiosInstance({
+              url: `/user-id-by-username/${payload.username}/`,
+              method: "get",
+              params: {}
+            }).then((response) => {
+              this.$store.commit("setAuthUser", {
+                authUser: response.data,
+                isAuthenticated: true
+              });
+              this.$router.push({name: 'Home'})
+            });
+            this.$emit('onSuccess');
+          }).catch((error) => {
+            console.log(error);
+            console.debug(error);
+            console.dir(error);
           });
         }).catch((err) => {
           console.error(err);
         });
-      },
+      }
     },
     computed: {
       ...mapGetters(['authenticated']),

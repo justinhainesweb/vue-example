@@ -26,13 +26,13 @@
         <button class="inline-block text-sm leading-none no-underline rounded py-3 px-2"
                 :class="linkClasses"
                 @click.prevent="toggleLoginPopup"
-                v-if="!authenticated">
+                v-if="!isAuthenticated">
           <icon icon="sign-in-alt" class="fill-current"/>
           Sign in
         </button>
         <button class="inline-block text-sm leading-none no-underline rounded py-3 px-2"
                 :class="linkClasses"
-                v-if="authenticated" @click="logout">Logout
+                v-if="isAuthenticated" @click="logout">Logout
         </button>
         <transition name="fadeDown">
           <login-popup v-if="loginPopupState" @onSuccess="closeLoginPopup"
@@ -56,7 +56,7 @@
       };
     },
     computed: {
-      ...mapGetters(['loginPopupState', 'authenticated']),
+      ...mapGetters(['loginPopupState', 'isAuthenticated']),
       navClasses() {
         return {
           'border-transparent': !this.scrolledTop,

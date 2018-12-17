@@ -40,6 +40,10 @@ const config = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new ErrorOverlayPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+      'process.env.DEBUG': JSON.stringify(process.env.DEBUG)
+    }),
   ],
 
   devServer: {
