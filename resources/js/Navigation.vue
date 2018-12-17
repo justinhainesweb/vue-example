@@ -5,7 +5,7 @@
     </a>
     <div class="block lg:hidden">
       <button
-              class="flex items-center px-3 py-2 border rounded text-grey-dark border-black-light hover:text-black hover:border-black">
+        class="flex items-center px-3 py-2 border rounded text-grey-dark border-black-light hover:text-black hover:border-black">
         <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title>
           <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
         </svg>
@@ -30,10 +30,15 @@
           <icon icon="sign-in-alt" class="fill-current"/>
           Sign in
         </button>
-        <button class="inline-block text-sm leading-none no-underline rounded py-3 px-2"
-                :class="linkClasses"
-                v-if="isAuthenticated" @click="logout">Logout
-        </button>
+
+        <template v-if="isAuthenticated">
+          <button class="inline-block text-sm leading-none no-underline rounded py-3 px-2" v-dropdown="'nav_auth'" :class="linkClasses">Profile</button>
+          <div class="dropdown-menu hidden">
+            <button class="inline-block text-sm text-black leading-none no-underline rounded py-3 px-2"
+                    @click="logout">Logout</button>
+          </div>
+        </template>
+
         <transition name="fadeDown">
           <login-popup v-if="loginPopupState" @onSuccess="closeLoginPopup"
                        v-on-clickaway="closeLoginPopup"></login-popup>
@@ -49,7 +54,7 @@
 
   export default {
     name: "navigation",
-    mixins: [ clickaway ],
+    mixins: [clickaway],
     data() {
       return {
         scrolledTop: false,
@@ -84,7 +89,7 @@
     },
     mounted() {
       document.addEventListener('scroll', (event) => {
-        const scrollTop = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0);
+        const scrollTop = (window.pageYOffset || document.scrollTop) - (document.clientTop || 0);
         if (scrollTop > 10) {
           this.scrolledTop = true;
         } else {
@@ -94,7 +99,8 @@
       });
     },
     beforeDestroy() {
-      document.removeEventListener('scroll', (event) => {});
+      document.removeEventListener('scroll', (event) => {
+      });
     },
   }
 </script>

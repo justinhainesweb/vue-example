@@ -157,4 +157,8 @@ code {
   font-size: inherit;
 }
 
+.dropdown-menu {
+  @apply absolute pin-r rounded bg-white shadow-md;
 
+  width: 180px;
+}

@@ -9,11 +9,11 @@
     <div class="min-h-screen relative bg-no-repeat bg-cover bg-center py-16 flex items-center justify-center overlay-50" :style="`background-image: url('${bg}')`">
       <div class="container">
         <div class="flex mb-4 -mx-3">
-          <h1 class="w-full text-white text-display text-center font-black font-heading">Scrape me 🚀</h1>
+          <h1 class="w-full text-white text-display text-center font-black font-heading">Learn Vue.js 🚀</h1>
         </div>
       </div>
 
-      <AlertNew class="pin-b absolute"/>
+      <alert-new class="pin-b absolute"/>
     </div>
 
     <div class="mt-16">
@@ -106,17 +106,6 @@
         </div>
       </div>
     </div>
-
-    <div class="mt-16">
-      <div class="container">
-        <div class="row mb-8">
-          <div class="col-12">
-            <profile></profile>
-          </div>
-        </div>
-      </div>
-    </div>
-
 
     <footer class="bg-grey-lightest py-16 mt-32">
       <div class="container">

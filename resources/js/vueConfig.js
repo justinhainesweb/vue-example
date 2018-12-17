@@ -3,13 +3,16 @@ import Vuex from 'vuex';
 import VueRouter from 'vue-router';
 import VueI18n from 'vue-i18n';
 import VeeValidate from 'vee-validate';
+
 import store from './store';
 import router from './router';
 import axios from 'axios';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faSignInAlt, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {faSignInAlt, faChevronRight} from '@fortawesome/free-solid-svg-icons';
+import {faGithub} from '@fortawesome/free-brands-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
+
 import utils from './utils';
 import messages from '@/lang/en';
 
@@ -95,6 +98,20 @@ library.add(faGithub);
  */
 Vue.component('icon', FontAwesomeIcon);
 
+
+Vue.directive('dropdown', {
+  bind(el) {
+    el.dataset.open = 'false';
+  },
+  inserted: (el) => {
+    const parent = el.parentElement;
+    el.addEventListener('click', (e) => {
+      ['hidden', 'block'].forEach((cssClass) => {
+        parent.querySelector('.dropdown-menu').classList.toggle(cssClass);
+      });
+    });
+  },
+});
 
 
 export {i18n, store, router};
