@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic import TemplateView
 from rest_framework import routers
 
 from rest_framework_simplejwt.views import (
@@ -25,7 +26,7 @@ urlpatterns = [
     re_path(r'^api/v1/auth/token/obtain/$', TokenObtainPairView.as_view()),
     re_path(r'^api/v1/auth/token/refresh/$', TokenRefreshView.as_view()),
 
-    path('', include('scrapper.urls', namespace='scrapper')),
+    re_path(r'^', TemplateView.as_view(template_name='base.html')),
 ]
 
 if settings.DEBUG:
