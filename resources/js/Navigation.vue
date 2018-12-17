@@ -34,7 +34,7 @@
         <template v-if="isAuthenticated">
           <button class="inline-block text-sm leading-none no-underline rounded py-3 px-2" v-dropdown="'nav_auth'" :class="linkClasses">Profile</button>
           <div class="dropdown-menu hidden">
-            <button class="inline-block text-sm text-black leading-none no-underline rounded py-3 px-2"
+            <button class="block w-full text-left text-sm text-black leading-none no-underline py-3 px-2"
                     @click="logout">Logout</button>
           </div>
         </template>
