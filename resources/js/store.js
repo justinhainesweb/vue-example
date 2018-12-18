@@ -23,6 +23,9 @@ export default new Vuex.Store({
   },
 
   mutations: {
+    initialize(state) {
+
+    },
     setAuthUser(state, {
       authUser,
       isAuthenticated
@@ -62,7 +65,18 @@ export default new Vuex.Store({
         authUser: {},
         isAuthenticated: false,
       });
-    }
+    },
+    initialize(context) {
+      if (state.jwt) {
+        axios.post('/api/v1/auth/token/verify/', {token: state.jwt}).then((response) => {
+          if (response.status === 200) {
+
+          }
+        }).catch(() => {
+          context.dispatch('logout');
+        });
+      }
+    },
   },
 
   getters: {
@@ -71,6 +85,9 @@ export default new Vuex.Store({
     },
     isAuthenticated(state) {
       return state.isAuthenticated;
+    },
+    authUser(state) {
+      return state.authUser;
     },
   },
 })

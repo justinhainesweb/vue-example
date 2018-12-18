@@ -162,3 +162,7 @@ code {
 
   width: 180px;
 }
+
+.dropdown-item {
+  @apply block w-full text-left text-sm text-black leading-none no-underline py-3 px-2;
+}

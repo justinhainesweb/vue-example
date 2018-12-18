@@ -8,6 +8,7 @@ from rest_framework import routers
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
+    TokenVerifyView
 )
 
 from scrapper import views as scrapper_views
@@ -25,6 +26,7 @@ urlpatterns = [
     re_path(r'^api/v1/auth/', include('rest_framework.urls', namespace='rest_framework')),
     re_path(r'^api/v1/auth/token/obtain/$', TokenObtainPairView.as_view()),
     re_path(r'^api/v1/auth/token/refresh/$', TokenRefreshView.as_view()),
+    re_path(r'^api/v1/auth/token/verify/$', TokenVerifyView.as_view(), name='token_verify'),
 
     re_path(r'^', TemplateView.as_view(template_name='base.html')),
 ]

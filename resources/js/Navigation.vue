@@ -34,7 +34,8 @@
         <template v-if="isAuthenticated">
           <button class="inline-block text-sm leading-none no-underline rounded py-3 px-2" v-dropdown="'nav_auth'" :class="linkClasses">Profile</button>
           <div class="dropdown-menu hidden">
-            <button class="block w-full text-left text-sm text-black leading-none no-underline py-3 px-2"
+            <span class="dropdown-item">{{ authUser.name }}</span>
+            <button class="dropdown-item"
                     @click="logout">Logout</button>
           </div>
         </template>
@@ -61,7 +62,7 @@
       };
     },
     computed: {
-      ...mapGetters(['loginPopupState', 'isAuthenticated']),
+      ...mapGetters(['loginPopupState', 'isAuthenticated', 'authUser']),
       navClasses() {
         return {
           'border-transparent': !this.scrolledTop,

@@ -44,7 +44,6 @@
     },
     methods: {
       authenticate() {
-        const date = new Date();
         const payload = {
           username: this.username,
           password: this.password,

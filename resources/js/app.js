@@ -20,7 +20,10 @@ export const initializeApp = (element, component) => {
     i18n,
     store,
     router,
-    ...component
+    ...component,
+    mounted() {
+      this.$store.commit('initialize');
+    }
   })
 };
 
