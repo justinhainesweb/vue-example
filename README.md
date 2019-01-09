@@ -7,7 +7,7 @@
 
 ## Getting started
 1. Create a virtualenv and switch to it `mkvirtualenv pyscrapper`
-2. Install pip packages `pip install requirements.txt`
+2. Install pip packages `pip install -r requirements.txt`
 3. Install NPM packages `yarn`
 4. Copy `.env.example` to `.env` file and fill up database connection information
 5. Run migrations `./manage.py migrate`
