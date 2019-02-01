@@ -1,5 +1,5 @@
 """
-WSGI config for pyscrapper project.
+WSGI config for app project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -14,6 +14,6 @@ from django.core.wsgi import get_wsgi_application
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pyscrapper.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'app.settings')
 
 application = get_wsgi_application()

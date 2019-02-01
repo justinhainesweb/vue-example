@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 from rest_framework.generics import RetrieveAPIView
 
-from pyscrapper import serializers
+from app import serializers
 from scrapper.serializers import UserSerializer
 from core.models import User
 

@@ -1,4 +1,4 @@
-# PyScrapper
+# Learn Vue.js
 
 ## Requirements
 - virtualenvwrapper
@@ -6,7 +6,7 @@
 - python3.5 and higher
 
 ## Getting started
-1. Create a virtualenv and switch to it `mkvirtualenv pyscrapper`
+1. Create a virtualenv and switch to it `mkvirtualenv learn-vuejs`
 2. Install pip packages `pip install -r requirements.txt`
 3. Install NPM packages `yarn`
 4. Copy `.env.example` to `.env` file and fill up database connection information

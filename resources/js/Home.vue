@@ -113,7 +113,7 @@
           <div class="col-12">
             <div class="text-center flex items-center justify-center flex-col">
               <a href="/" class="no-underline text-indigo-dark hover:text-indigo-darkest font-semibold text-xl tracking-tight appName">{{ $appName }}</a>
-              <a href="https://github.com/rafalolszewski94/pyscrapper"
+              <a href="https://github.com/rafalolszewski94/learn-vuejs"
                  class="no-underline text-black font-semibold text-xl tracking-tight mt-4"
                  title="GitHub repository" target="_blank">
                 <icon :icon="['fab', 'github']"></icon>
