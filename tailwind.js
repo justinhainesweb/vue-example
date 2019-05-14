@@ -983,7 +983,7 @@ module.exports = {
 
         const buttons = {
           '.button': {
-            padding: `${padding['2']} ${padding['3']}`,
+            padding: `${padding['3']} ${padding['4']}`,
             borderRadius: borderRadius['default'],
             color: textColors.black,
             backgroundColor: bgColors.transparent,

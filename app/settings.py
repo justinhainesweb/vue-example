@@ -12,19 +12,13 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import datetime
 import os
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '2^pu*hi2()0rkbiz7d$g+t!e-^*2u!!@+9%y&&v%59rm5$isx%'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'localhost']
 
 SITE_ID = 1
 
@@ -72,7 +66,6 @@ SECURITY_MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
 ]
 
-# This is required to go first! See: https://github.com/ottoyiu/django-cors-headers#setup
 CORS_MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
@@ -112,9 +105,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'app.wsgi.application'
 
-# Password validation
-# https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -129,9 +119,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-# Internationalization
-# https://docs.djangoproject.com/en/2.1/topics/i18n/
 
 LANGUAGE_CODE = 'en'
 
