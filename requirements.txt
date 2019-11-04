@@ -15,7 +15,7 @@ djangorestframework==3.9.0
 djangorestframework-jwt==1.11.0
 djangorestframework-simplejwt==3.3
 docutils==0.14
-ecdsa==0.13
+ecdsa==0.13.3
 future==0.17.1
 html5lib==1.0.1
 idna==2.7
