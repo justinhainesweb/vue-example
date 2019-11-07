@@ -1,5 +1,3 @@
-# Learn Vue.js
-
 ## Requirements
 - virtualenvwrapper
 - yarn
